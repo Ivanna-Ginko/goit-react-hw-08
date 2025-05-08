@@ -1,0 +1,28 @@
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgb(151, 151, 170);
+    padding: 20px;
+}
+
+.btn {
+    width: 30%;
+    height: 50px;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    color: rgb(253, 254, 255);
+    background-color: rgb(156, 156, 197);
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    }
+
+.text {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(0, 0, 33);
+}

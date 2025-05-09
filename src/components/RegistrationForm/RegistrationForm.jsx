@@ -1,23 +1,42 @@
+import { useDispatch } from 'react-redux';
 import css from './RegistrationForm.module.css'
+import { Formik, Form, Field } from 'formik';
+import { registerThunk } from '../../redux/auth/operation';
 
 
 const RegistrationForm = () => {
+
+  const dispatch = useDispatch()
+
+const initialValues = {
+  name: '',
+  email: '',
+  password: '',
+}
+
+const handleSabmit = (values, options) => {
+  console.log (values)
+  dispatch(registerThunk(values))
+}
+
   return (
-    <form className={css.form} autoComplete="off">
+  <Formik initialValues={initialValues} onSubmit={handleSabmit}> 
+    <Form className={css.form} autoComplete="off">
       <label className={css.label}>
         Username
-        <input type="text" name="name" />
+        <Field type="text" name="name" />
       </label>
       <label className={css.label}>
         Email
-        <input type="email" name="email" />
+        <Field type="email" name="email" />
       </label>
       <label className={css.label}>
         Password
-        <input type="password" name="password" />
+        <Field type="password" name="password" />
       </label>
       <button type="submit">Register</button>
-    </form>
+    </Form>
+  </Formik>
   );
 }
 

@@ -1,18 +1,37 @@
 import css from './LoginForm.module.css'
+import { useDispatch } from 'react-redux';
+import { Form, Formik, Field } from 'formik'
+import { logInThunk } from '../../redux/auth/operation';
+
 
 const LoginForm = () => {
+
+  const dispatch = useDispatch();
+
+const initialValues = {
+  email: '',
+  password: '',
+}
+
+const handleSabmit = (values, options) => {
+  dispatch(logInThunk(values))
+  console.log (values)
+}
+
   return (
-    <form className={css.form}  autoComplete="off">
+  <Formik initialValues={initialValues} onSubmit={handleSabmit}>
+    <Form className={css.form}  autoComplete="off">
       <label className={css.label}>
         Email
-        <input type="email" name="email" />
+        <Field type="email" name="email" />
       </label>
       <label className={css.label}>
         Password
-        <input type="password" name="password" />
+        <Field type="password" name="password" />
       </label>
       <button type="submit">Log In</button>
-    </form>
+    </Form>
+  </Formik>
   );
 }
 

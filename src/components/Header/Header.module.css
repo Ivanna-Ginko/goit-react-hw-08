@@ -1,0 +1,21 @@
+
+
+
+.box {
+    margin-top: 0;
+    display: flex;
+    padding-left: 50%;
+    gap: 20px;
+    font-size: x-large;
+    border-bottom: 4px solid rgb(207, 216, 222);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.link {
+    color: rgb(161, 199, 232);
+}
+
+.active {
+    color: rgb(54, 55, 55);
+}

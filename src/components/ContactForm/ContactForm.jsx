@@ -1,9 +1,7 @@
-//import { nanoid } from "@reduxjs/toolkit";
 import css from "./ContactForm.module.css"
 import { useDispatch } from "react-redux";
-//import { addContact } from "../../redux/contactsSlice"
 import { nanoid } from "@reduxjs/toolkit";
-import { addContactThunk } from "../../redux/contactsOps";
+import { addContactThunk } from "../../redux/contacts/operations";
 
 
 

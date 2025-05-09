@@ -33,4 +33,3 @@ export const addContactThunk = createAsyncThunk('addContact', async (body, thunk
       }
     }
   );
-

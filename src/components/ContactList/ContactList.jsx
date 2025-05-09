@@ -1,4 +1,4 @@
-import { SelectFilterContactsMemo, selectLoading, selectError  } from "../../redux/contactsSlice";
+import { SelectFilterContactsMemo, selectLoading, selectError  } from "../../redux/contacts/selectors";
 import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css"
 import { useSelector } from 'react-redux';

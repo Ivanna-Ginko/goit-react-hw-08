@@ -1,4 +1,5 @@
-import { fetchDataThunk, deleteContactThunk, addContactThunk } from "./operations"
+import { fetchDataThunk, deleteContactThunk, addContactThunk  } from "./operations"
+import { logOutThunk } from '../auth/operation'
 import { createSlice, isAnyOf} from "@reduxjs/toolkit"
 
 
@@ -27,6 +28,12 @@ const slice = createSlice({
             state.error = null;
             state.items.push(action.payload);
         })
+         builder.addCase(logOutThunk.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
+        state.loadingoading = false;
+      }
+        )
         .addMatcher(isAnyOf(addContactThunk.rejected, deleteContactThunk.rejected, fetchDataThunk.rejected ),
          (state, action) => {
             state.loading = false;
@@ -37,6 +44,7 @@ const slice = createSlice({
             state.loading = true;
             state.error = null;
        })
+       
     }
 })
 

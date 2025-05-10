@@ -31,6 +31,13 @@ const slice = createSlice ({
       builder.addCase(refreshThunk.fulfilled, (state, action) => {
         state.user = action.payload;
         state.isLoggedIn = true;
+        state.isRefreshing = false;
+      })
+      builder.addCase(refreshThunk.pending, (state) => {
+        state.isRefreshing = true;
+      })
+      builder.addCase(refreshThunk.rejected, (state) => {
+        state.isRefreshing = false;
       })
     }
 

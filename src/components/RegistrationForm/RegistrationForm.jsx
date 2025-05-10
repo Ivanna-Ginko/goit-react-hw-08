@@ -14,9 +14,10 @@ const initialValues = {
   password: '',
 }
 
-const handleSabmit = (values, options) => {
+const handleSabmit = (values, actions) => {
   console.log (values)
   dispatch(registerThunk(values))
+  actions.resetForm();
 }
 
   return (

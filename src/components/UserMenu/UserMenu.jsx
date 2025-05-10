@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUser } from '../../redux/auth/selectors';
-import { logOutThunk } from '../../redux/auth/operation';
+import { logOutThunk } from '../../redux/auth/operations';
 import css from './UserMenu.module.css'
 
 

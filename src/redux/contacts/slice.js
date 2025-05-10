@@ -1,5 +1,5 @@
 import { fetchDataThunk, deleteContactThunk, addContactThunk  } from "./operations"
-import { logOutThunk } from '../auth/operation'
+import { logOutThunk } from '../auth/operations'
 import { createSlice, isAnyOf} from "@reduxjs/toolkit"
 
 

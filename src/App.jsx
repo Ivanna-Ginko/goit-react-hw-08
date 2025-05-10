@@ -8,7 +8,7 @@ import { useEffect, lazy, Suspense  } from 'react'
 //import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 import { Route, Routes } from "react-router-dom"
 import Layout from './components/Layout.jsx'
-import { refreshThunk } from './redux/auth/operation.js'
+import { refreshThunk } from './redux/auth/operations.js'
 import { selectIsRefresh } from './redux/auth/selectors.js'
 import PrivateRoute from './components/PrivateRoute.jsx'
 import RestrictedRoute from './components/RestrictedRoute.jsx'
